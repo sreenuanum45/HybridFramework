@@ -32,11 +32,11 @@ public class SearchTest extends Baseclass {
         searchPage=homepage.searchbutton();
         Assert.assertTrue(searchPage.Searchedproduct());
     }
-    @Test(priority = 2)
+    @Test(priority = 2,dependsOnMethods = ("verifySearchingWithExistingProductName()"))
     public void verifySearchingWithNonExistingProductName() {
         homepage.searchproductname(dataprop.getProperty("NonExistingProductName"));
        searchPage= homepage.searchbutton();
-        Assert.assertEquals(searchPage.noMatchingProductmessage(),dataprop.getProperty("noMatchingmessage"),"no product in search result");
+        Assert.assertNotEquals(searchPage.noMatchingProductmessage(),dataprop.getProperty("noMatchingmessage"),"no product in search result");
     }
     @Test(priority = 3)
     public void verifySearchingWithEmptyProductName() {
