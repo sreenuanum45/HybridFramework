@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+      <listener class-name="listeners.MyListeners"></listener>  
+    </listeners>
+    <test  name="D:/Myprojects/com.org.flipkart/src/test/java/testcases">
+        <classes>
+            <class name="testcases.LoginTest"/>
+            <class name="testcases.RegisterTest"/>
+            <class name="testcases.SearchTest"/>
+        </classes>
+    </test>
+</suite>
