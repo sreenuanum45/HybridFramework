@@ -10,7 +10,7 @@ public class SearchPage {
 
     @FindBy(linkText = "HP LP3065")
     private WebElement Searchedproduct;
-    @FindBy(xpath = "//input[@id='button-search']//following-sibling::p")
+    @FindBy(xpath = "(//p)[3]")
     private WebElement noMatchingProductmessage;
     public SearchPage(RemoteWebDriver driver){
         this.driver=driver;

@@ -39,8 +39,7 @@ public class LoginTest extends Baseclass{
     }
     @Test(priority = 2)
     public void withoutcredentialslogin(){
-    	//updatecommit with more detalis
-    	//dont enter the credentials
+    	//updatecommit
         login.loginbutton();
         Assert.assertTrue(login.warningmessageDisplay());
     }
