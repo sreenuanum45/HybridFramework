@@ -52,7 +52,6 @@ public class Baseclass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilites_1.wait_Time));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utilites_1.page_Loading_Time));
-        driver.get(p.getProperty("url"));
         return driver;
     }
 

@@ -26,6 +26,7 @@ public class RegisterTest extends Baseclass {
     @BeforeMethod
     public void setup() throws ElementClickInterceptedException, InterruptedException {
         driver= intialzineBrowserandOpenApplication(p.getProperty("browserName"));
+        driver.get(p.getProperty("url"));
         homepage =new Homepage(driver);
         homepage.clickOnmyAccount();
         registerPage= homepage.registerbutton();
