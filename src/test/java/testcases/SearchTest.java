@@ -24,6 +24,7 @@ public class SearchTest extends Baseclass {
     @BeforeMethod
     public void setup() throws ElementClickInterceptedException, InterruptedException {
         driver=intialzineBrowserandOpenApplication(p.getProperty("browserName"));
+        driver.get(p.getProperty("url"));
         homepage=new Homepage(driver);
     }
     @Test(priority = 1)
